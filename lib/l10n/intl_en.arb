@@ -1,0 +1,18 @@
+{
+  "@@locale": "en",
+  "usagePermGranted": " Usage Statistics permission granted, enjoy :) ",
+  "usagePermDenied": " Usage Statistics permission is missing :(\nPlease grant it ↓ ",
+  "usageStatsAlertDialogTitle": "Usage stats permission",
+  "usageStatsAlertDialogDesc": "In order for the app to get access to mobile data usage, it needs to be granted a special permission manually.\nFind DataUsageQS in the list that opens and enable the permission.",
+  "cancelOption": "Cancel",
+  "continueOption": "Continue",
+  "grantPermButton": "Grant usage statistics permission",
+  "waitTimeInfo": " You might have to wait a little bit for the tile to update after granting the permission.",
+  "privacyConcern": " The app will not share, sell, save or publish your data under any circumstances. All your data stays on your device.",
+  "infoButton": "App info",
+  "githubRepo": "GitHub repository",
+  "reportIssues": "Report an issue",
+  "appVersion": "App version: ",
+  "madeBy": "Made by 2m6res",
+  "personalWebsite": "My website"
+}

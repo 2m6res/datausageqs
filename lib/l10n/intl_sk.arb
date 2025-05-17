@@ -1,0 +1,18 @@
+{
+  "@@locale": "sk",
+  "usagePermGranted": " Prístup k údajom o používaní povolený, užívajte :) ",
+  "usagePermDenied": " Prístup k údajom o používaní chýba :(\nProsím povoľte ho ↓ ",
+  "usageStatsAlertDialogTitle": "Prístup k údajom o používaní",
+  "usageStatsAlertDialogDesc": "Aby dokázala apka získať prístup k využitým mobilným dátam, musíte jej manuálne povoliť toto špeciálne povolenie.\nNájdite DataUsageQS v zozname ktorý sa otvorí a povoľte prístup.",
+  "cancelOption": "Zrušiť",
+  "continueOption": "Pokračovať",
+  "grantPermButton": "Sprístupniť apke údaje o používaní",
+  "waitTimeInfo": " Je možné, že budete musieť chvíľu počkať na to, aby sa dlaždica rýchlych nastavení po povolení prístupu aktualizovala.",
+  "privacyConcern": " Vaše údaje v žiadnom prípade nebude apka zdieľať, predávať, ukladať ani zverejňovať. Všetky vaše údaje ostávajú na vašom zariadení.",
+  "infoButton": "Informácie o aplikácii",
+  "githubRepo": "GitHub repozitár",
+  "reportIssues": "Nahlásiť chybu",
+  "appVersion": "Verzia apky: ",
+  "madeBy": "Vytvoril 2m6res",
+  "personalWebsite": "Moja webstránka"
+}
