@@ -1,4 +1,5 @@
 # DataUsageQS
+### "Data Usage Quick Settings"
 A simple Flutter app, with a Kotlin backend, made to display this month's mobile data usage in Quick Settings.
 
 ## Why?
