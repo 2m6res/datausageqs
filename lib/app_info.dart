@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'app_version.dart';
 import 'generated/l10n.dart';
@@ -8,6 +9,13 @@ import 'package:DataUsageQS/app_info.dart';
 
 class AppInfoRoute extends StatelessWidget {
   const AppInfoRoute({super.key});
+
+  _launchURL(String url) async {
+    final Uri _uri = Uri.parse(url);
+    try {
+      await launchUrl(_uri, mode: LaunchMode.externalApplication);
+    } catch(ignored) {}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +46,9 @@ class AppInfoRoute extends StatelessWidget {
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 24)
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      _launchURL("https://github.com/2m6res/datausageqs");
+                    },
                     icon: Icon(
                       FontAwesomeIcons.github,
                       size: 24,
@@ -70,7 +80,7 @@ class AppInfoRoute extends StatelessWidget {
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 24)
                     ),
-                    onPressed: () {},
+                    onPressed: () { _launchURL("https://github.com/2m6res/datausageqs/issues"); },
                     icon: Icon(
                       Icons.warning_amber_rounded,
                       size: 24,
@@ -107,11 +117,13 @@ class AppInfoRoute extends StatelessWidget {
                 width: double.infinity,
                 height: 65,
                 child: TextButton.icon(
+
                     style: TextButton.styleFrom(
                       backgroundColor: Color.fromRGBO(28, 28, 28, 1),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
+                      overlayColor: Colors.transparent,
                       padding: EdgeInsets.symmetric(horizontal: 24)
                     ),
                     onPressed: () {},
@@ -145,7 +157,7 @@ class AppInfoRoute extends StatelessWidget {
                       ),
                       padding: EdgeInsets.symmetric(horizontal: 24)
                     ),
-                    onPressed: () {},
+                    onPressed: () { _launchURL("https://2m6res.github.io/"); },
                     icon: Icon(
                       Icons.public_outlined,
                       size: 24,

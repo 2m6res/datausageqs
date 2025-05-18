@@ -3,7 +3,7 @@ package net.twom6res.datausageqs
 import android.app.usage.NetworkStatsManager
 import android.content.*
 import android.icu.util.Calendar
-import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import java.util.Locale
 
 object DataUsageHelper {
@@ -21,7 +21,7 @@ object DataUsageHelper {
         }.timeInMillis
 
         val bucket = statsManager.querySummaryForDevice(
-            ConnectivityManager.TYPE_MOBILE,
+            NetworkCapabilities.TRANSPORT_CELLULAR,
             null,
             startOfMonth,
             now
@@ -29,6 +29,9 @@ object DataUsageHelper {
 
 
         val totalBytes = bucket.rxBytes + bucket.txBytes
-        return String.format("%.1f MB used", totalBytes / (1024.0 * 1024))
+        return String.format(Locale.getDefault(), buildString {
+            append("%.1f MB ")
+            append(context.resources.getString(R.string.data_used))
+        }, totalBytes / (1024.0 * 1024))
     }
 }

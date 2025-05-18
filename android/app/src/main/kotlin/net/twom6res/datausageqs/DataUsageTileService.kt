@@ -1,11 +1,7 @@
 package net.twom6res.datausageqs
 
-import android.annotation.SuppressLint
-import android.annotation.TargetApi
 import android.app.AppOpsManager
-import android.app.PendingIntent
 import android.content.Context
-import android.content.Intent
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import kotlinx.coroutines.CoroutineScope
@@ -13,7 +9,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import net.twom6res.datausageqs.DataUsageHelper.getMonthlyMobileDataUsage
-import java.util.Locale
 import kotlin.properties.Delegates
 
 class DataUsageTileService : TileService() {
@@ -39,10 +34,12 @@ class DataUsageTileService : TileService() {
             serviceScope.launch {
                 val dataUsage = getMonthlyMobileDataUsage(this@DataUsageTileService)
                 qsTile.label = dataUsage
+                qsTile.state = Tile.STATE_INACTIVE
+                qsTile.updateTile()
             }
-            qsTile.updateTile()
         } else {
-            qsTile.label = String.format("Missing permission, check the app.")
+            qsTile.label = String.format(resources.getString(R.string.missing_permission))
+            qsTile.state = Tile.STATE_UNAVAILABLE
             qsTile.updateTile()
         }
     }

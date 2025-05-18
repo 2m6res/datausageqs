@@ -1,13 +1,10 @@
 import 'dart:async';
-import 'dart:ui';
 
 import 'package:DataUsageQS/app_info.dart';
 import 'package:DataUsageQS/generated/l10n.dart';
 import 'package:android_intent_plus/android_intent.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:page_route_animator/page_route_animator.dart';
 import 'package:usage_stats/usage_stats.dart';
 
 void main() {
