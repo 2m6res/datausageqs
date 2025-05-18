@@ -1,16 +1,14 @@
-# datausageqs
+# DataUsageQS
+A simple Flutter app, with a Kotlin backend, made to display this month's mobile data usage in Quick Settings.
 
-A new Flutter project.
+## Why?
+I didn't have easy access to my mobile data usage information on my phone, so I made it myself while learning a little bit of Kotlin and Flutter.
 
-## Getting Started
+# Features
+- Support for:
+  - English
+  - Slovak
+- This month's data usage QS tile (customization options coming soon)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Download
+Grab the latest release from the Github releases page, and install it.
